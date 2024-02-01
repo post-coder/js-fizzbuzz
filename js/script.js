@@ -8,7 +8,19 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 *BONUS 1:*
 Crea un container nel DOM , aggiungendo (attraverso la funzione append()) 
 un elemento html con il numero o la stringa corretta da mostrare.
+
+
+*BONUS 2:*
+Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1,
+a seconda che il valore inserito sia un numero, un fizz, 
+un buzz o un fizzbuzz.
+
 */
+
+
+// mi conservo in una variabile l'elemento html della griglia
+const gridElement = document.querySelector("#grid");
+
 
 
 // ripetere un determinato set di istruzioni per un determinato numero di volte
@@ -39,5 +51,19 @@ for (let i = 1; i <= 100; i++) {
     console.log(output);
 
     
+    // creo un nuovo elemento html
+    const newElement = document.createElement("div");
+
+    // ci scrivo all'interno la stringa che abbiamo appena generato
+    newElement.innerText = output;
+
+    // aggiungiamo la classe "square" all'elemento
+    newElement.className = "square";
+
+
+
+
+    // "appendo" l'elemento html alla griglia
+    gridElement.append(newElement);
 
 }

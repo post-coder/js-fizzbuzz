@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* reset */
+
+#grid {
+    display: flex;
+    flex-flow: wrap;
+    gap: 5px;
+
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding-top: 100px;
+}
+
+#grid .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(70px - 5px / 10 * 9);
+    height: calc(70px - 5px / 10 * 9);
+
+    border: solid 1px black;
+}
