@@ -26,3 +26,16 @@
 
     border: solid 1px black;
 }
+
+
+.fizz {
+    background-color: #0cd6a1;
+}
+
+.buzz {
+    background-color: #ffd166;
+}
+
+.fizz.buzz {
+    background-color: #f0466f;
+}

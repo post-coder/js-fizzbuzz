@@ -36,20 +36,23 @@ for (let i = 1; i <= 100; i++) {
 
     // se multiplo di 3, ci scrivo dentro Fizz
     if(i % 3 == 0) {
+
         output = "Fizz";
 
-        // bonus 2: coloro diversamente
-        newElement.style.backgroundColor = "#0cd6a1";
+        // modifico la classe
+        newElement.className = "fizz ";
+
     }
     
     // se multiplo di 5, AGGIUNGO alla stringa la parola "Buzz"
     // se la stringa era vuota, ci sarà scritto solo "Buzz", se non lo era
     // la parola "Buzz" sarà aggiunta alla fine (FizzBuzz)
-    if (i % 5 == 0) {    
+    if (i % 5 == 0) {   
+
         output += "Buzz";
 
-        // bonus 2: coloro diversamente
-        newElement.style.backgroundColor = "#ffd166";
+        // modifico la classe
+        newElement.className += "buzz ";
     } 
     
     // se l'output è vuoto (quindi non era nè multiplo di 3 nè di 5)
@@ -58,10 +61,6 @@ for (let i = 1; i <= 100; i++) {
 
         output = i;
 
-    } else if (output == "FizzBuzz") {
-
-        newElement.style.backgroundColor = "#f0466f";
-        
     }
 
     // qualsiasi sia il suo contenuto, lo stampo in console
@@ -74,7 +73,7 @@ for (let i = 1; i <= 100; i++) {
     newElement.innerText = output;
 
     // aggiungiamo la classe "square" all'elemento
-    newElement.className = "square";
+    newElement.className += "square";
 
 
 
