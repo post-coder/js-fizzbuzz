@@ -29,9 +29,17 @@ for (let i = 1; i <= 100; i++) {
     // inizializzo una variabile stringa vuota
     let output = "";
 
+    // creo un nuovo elemento html
+    const newElement = document.createElement("div");
+
+
+
     // se multiplo di 3, ci scrivo dentro Fizz
     if(i % 3 == 0) {
         output = "Fizz";
+
+        // bonus 2: coloro diversamente
+        newElement.style.backgroundColor = "#0cd6a1";
     }
     
     // se multiplo di 5, AGGIUNGO alla stringa la parola "Buzz"
@@ -39,20 +47,28 @@ for (let i = 1; i <= 100; i++) {
     // la parola "Buzz" sarà aggiunta alla fine (FizzBuzz)
     if (i % 5 == 0) {    
         output += "Buzz";
+
+        // bonus 2: coloro diversamente
+        newElement.style.backgroundColor = "#ffd166";
     } 
     
     // se l'output è vuoto (quindi non era nè multiplo di 3 nè di 5)
     // allora ci scrivo dentro la variabile i, ovvero il numero attuale
     if(output == "") {
+
         output = i;
+
+    } else if (output == "FizzBuzz") {
+
+        newElement.style.backgroundColor = "#f0466f";
+        
     }
 
     // qualsiasi sia il suo contenuto, lo stampo in console
     console.log(output);
 
     
-    // creo un nuovo elemento html
-    const newElement = document.createElement("div");
+    
 
     // ci scrivo all'interno la stringa che abbiamo appena generato
     newElement.innerText = output;
@@ -61,6 +77,8 @@ for (let i = 1; i <= 100; i++) {
     newElement.className = "square";
 
 
+
+    // modifico la classe, lo stile lo decido dal css
 
 
     // "appendo" l'elemento html alla griglia
